@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    entry: ['./src/stopwatch/stopwatch.ts',  './src/dragdrop/dragdrop.ts'],
+    entry: ['./src/stopwatch/stopwatch.ts',  './src/dragdrop/dragdrop.ts', './src/piglatin/piglatin.ts'],
     devtool: 'inline-source-map',
     module: {
         rules: [
