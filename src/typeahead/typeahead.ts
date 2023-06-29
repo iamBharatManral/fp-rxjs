@@ -1,6 +1,42 @@
 import {filter, from, fromEvent, map, mergeMap, pluck, reduce, tap} from "rxjs";
 
-const usStates = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
+const states = [ "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttarakhand",
+    "Uttar Pradesh",
+    "West Bengal",
+    "Andaman and Nicobar Islands",
+    "Chandigarh",
+    "Dadra and Nagar Haveli",
+    "Daman and Diu",
+    "Delhi",
+    "Lakshadweep",
+    "Puducherry"]
+
 const textBox : HTMLInputElement = document.querySelector(".typeAheadBox")
 const typeAheadText : HTMLInputElement = document.querySelector(".typeAheadContainer")
 
@@ -11,7 +47,7 @@ keyUp$.pipe(
     tap(() => typeAheadText.innerHTML = ""),
     filter(val => val.length >= 2),
     mergeMap(val =>
-        from(usStates).pipe(
+        from(states).pipe(
             map(state => state.toLowerCase()),
             filter(state => state.includes(val)),
             map(state => state.split(val).join(`<b>${val}</b>`)),
