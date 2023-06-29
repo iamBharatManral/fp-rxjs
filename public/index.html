@@ -6,35 +6,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="stopwatch">
-        <h2>Stopwatch</h2>
-        <div class="time"></div>
-        <button class="start">Start</button>
-        <button class="stop">Stop</button>
+    <header>
+        <h1>Tiny Rxjs Projects</h1>
+        <a href="https://github.com/iamBharatManral/fp-rxjs" target="_blank"><img src="/github.svg" alt="github icon"></a>
+    </header>
+    <div class="projects">
+        <div class="leftContent">
+            <div class="stopwatch">
+                <h2>Stopwatch</h2>
+                <div class="time">0.0</div>
+                <button class="start">Start</button>
+                <button class="stop">Stop</button>
+            </div>
+            <hr>
+            <div class="dragdrop">
+                <h2>Drag&Drop</h2>
+                <button class="drag" draggable="true">drag me</button>
+            </div>
+            <hr>
+            <div class="piglatin">
+                <h2>PigLatin</h2>
+                <form action="#">
+                    <label for="text">Enter text: </label>
+                    <input type="text" id="text">
+                </form>
+                <p class="pig"></p>
+            </div>
+            <hr>
+            <div class="typeahead">
+                <h2>Typeahead</h2>
+                <form action="#">
+                    <label for="state">Enter US state name: </label>
+                    <input type="text" class="typeAheadBox" id="state">
+                </form>
+                <div class="typeAheadContainer"></div>
+            </div>
+            <hr>
+        </div>
+        <div class="rightContent">
+            <div class="mosaic">
+                <h2>Mosaic</h2>
+                <div class="progress"></div>
+                <canvas></canvas>
+            </div>
+        </div>
     </div>
-    <hr>
-    <div class="dragdrop">
-        <h2>Drag&Drop</h2>
-        <button class="drag" draggable="true">drag me</button>
-    </div>
-    <hr>
-    <div class="piglatin">
-        <h2>PigLatin</h2>
-        <input type="text">
-        <p class="pig"></p>
-    </div>
-    <hr>
-    <div class="typeahead">
-        <h2>Typeahead</h2>
-        <input type="text" class="typeAheadBox">
-        <div class="typeAheadContainer"></div>
-    </div>
-    <hr>
-    <div class="mosaic">
-        <h2>Mosaic</h2>
-        <div class="progress"></div>
-        <canvas></canvas>
-    </div>
+
     <script src="./bundle.js"></script>
 </body>
 </html>

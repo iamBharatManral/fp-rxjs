@@ -51,7 +51,7 @@ merge(...requests).pipe(
     delay(1000),
     scan(prev => prev + (100 / requests.length), 0)
 ).subscribe(percentDone => {
-    progressBar.style.width = `${percentDone}%`
+    progressBar.style.width = `${percentDone * 4.5}px`
     progressBar.style.backgroundColor = "gold"
     progressBar.innerText = Math.round(percentDone) + "%"
 })
